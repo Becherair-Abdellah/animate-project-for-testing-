@@ -1,0 +1,897 @@
+/* ------------- global ruls --------------- */
+:root{
+    /* ---------- main color ---------- */
+    --main-color1:#ff0066;
+    --main-color2:#ececec;
+    /* -------------- other color we need to use it -------- */
+    --color1:#ff2a2a;
+    --color2:#00ff66;
+    --color3:#00ccff;
+    --color4:#5555ff;
+    --color5:#cc00ff;
+    --color6:#ff5599;
+    --color7:#5f5fd3;
+    --color8:#e1bd08;
+}
+li{
+    list-style: none;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    height: 100vh;
+}
+body{
+    font-family: 'Cairo', sans-serif;
+    height: 100%;
+    font-family: 'Cairo', sans-serif;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+} 
+.container .icons{
+    display: none;
+}
+/* ---------- styling page one ----------- */
+.logoname h2 .bigletter {
+    font-size: 3rem;
+    color: var(--main-color1);
+    transition: .3s;
+    animation: changColor 1s ease forwards;
+    animation-delay: 0.3s;
+    animation: rotate 1s ease forwards;
+    position: absolute;
+    transform: rotate(0deg);
+    top: -20px;
+    left: -36px;
+}
+.logoname p{
+    transition: .3s;
+    animation: scale .2s ease forwards;
+}
+.logoname h2{
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    width: fit-content;
+    transition: .3s;
+    animation: changColor2 1s ease forwards;
+    animation-delay: 0.3s;
+}
+.logoname h2::before{
+    content: '';
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--main-color1);
+    transition: .3s;
+    animation: full 1s ease forwards;
+    z-index: -1;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes full{
+    0%{
+        height: 0;
+    }
+    30%{
+        height: 29%;
+    }
+    100%{
+        height: 100%;
+        border-radius: 1px;
+    }
+}
+@keyframes changColor2{
+    0%{
+        color: black;
+    }
+    100%{
+        color: white;
+    }
+
+}
+@keyframes scale{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* ----------- styling page 2 ------------- */
+.getstart{
+    text-align: center;
+}
+.getstart ion-icon{
+    background: var(--main-color1);
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 7px 7px;
+    transition: .3s;
+    transform: scale(0);
+}
+.getstart.animate ion-icon{
+    transform: scale(1);
+}
+.getstart p{
+    transform: scale(0);
+    transition: .2s;
+}
+.getstart.animate p{
+    transform: scale(1);
+}
+/* --------- styling page 3 -------------- */
+.container{
+    display: block;
+    text-align: center;
+}
+.container .loginWith{
+    padding: 0.5rem 1rem;
+    transition: .4s;
+    transform: scale(0);
+}
+.container .loginWith h3{
+    text-align: start;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: normal;
+}
+.container .loginWith .accounts{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.container .loginWith .accounts li{
+    color: white;
+    font-weight: bold;
+    border-radius: 2px;
+    padding: 7px 0;
+}
+.container .loginWith .accounts li:not(:last-child){
+    margin-bottom: .7rem;
+}
+.container .loginWith .accounts li:nth-child(1){
+    background: linear-gradient(45deg, #00099f, #f00305);
+}
+.container .loginWith .accounts li:nth-child(2){
+    background: linear-gradient(45deg, #00099f, #037af0);
+}
+.container .loginWith .accounts li:nth-child(3){
+    background: linear-gradient(45deg, #0b61f7, #037af0)
+}
+.container .loginWith h4{
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.container .loginWith .createAccount {
+    margin: 1.3rem 0;
+}
+.container svg{
+    display: none;
+}
+.container svg.show{
+    display: block;
+    margin: 0 auto;
+    transform: scale(0);
+    transition: 0.4s;
+}
+.container svg.scale{
+    transform: scale(1);
+}
+.loginWith.scale{
+    transform: scale(1);
+}
+.loginWith .notNow{
+    display: block;
+    background: var(--main-color1);
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    padding: 3px 1rem;
+    border-radius: 0.2rem;
+    margin-left: auto;
+}
+/* -------------- styling page LoginUser -------------- */
+.container #back{
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    background: var(--main-color1);
+    color: white;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 0.2rem;
+    border: none;
+    font-size: 1rem;
+}
+.textImg .account{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 1rem auto;
+}
+.textImg .account{
+    transform: scale(0);
+    transition: .3s;
+}
+.textImg.animate .account{
+    transform: scale(1);
+}
+.textImg svg{
+    position: relative;
+    top: -43px;
+    background: var(--main-color2);
+    padding: 15px;
+    border-radius: 55px 0 67px 0;
+}
+.textImg .account input{
+    height: 35px;
+    width: 250px;
+    border: none;
+    background: #e7e7e7;
+    border-radius: 4px;
+    outline: none;
+    padding: 0 0 0 0.7rem;
+    font-size: .8rem;
+    caret-color: var(--main-color1);
+    margin-bottom: 1rem;
+}
+.textImg .account .buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.textImg .account .buttons button{
+    background: var(--main-color1);
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    padding: 8px 1rem;
+    border-radius: 0.2rem;
+    border: none;
+}
+/* ----------- styling page main -------------- */
+.container.center{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#addnote{
+    position: absolute;
+    bottom: 3%;
+    left: 45%;
+    background: var(--main-color1);
+    color: white;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 7px;
+    border: none;
+    font-size: 1.2rem;
+    transition: .5s;
+    transform: rotate(0deg);
+
+}
+.NoNotes.none{
+    display: none;
+}
+#addnote.none{
+    display: none;
+}
+#addnote.rotate{
+    transform: rotate(180deg);
+}
+/* --------------- styling ------------- */
+.newNote{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    background: #f4f4f4;
+    border-radius: 4px;
+    box-shadow: 0 0 1px;
+    position: relative;
+    transform: scale(0);
+    transition: .3s;
+    display: none;
+
+}
+.newNote.removenone{
+    display: block;
+}
+.newNote.visible{
+    transform: scale(1);
+}
+.newNote .icon{
+    height: 50px;
+}
+.newNote .icons{
+    position: absolute;
+    background: #c7c7c7;
+    display: flex;
+    flex-wrap: wrap;
+    width: 191px;
+    gap: 7px;
+    padding: 6px;
+    border-radius: 3px;
+    top: 27%;
+    right: 14%;
+    box-shadow: 0px 0px 6px -1px #444444;
+    transform: scale(0);
+    transition: .3s;
+}
+.newNote .icons.animate{
+    transform: scale(1);
+}
+.newNote .icons ion-icon{
+    font-size: 1.5rem;
+    
+}
+.newNote .icons.hidden{
+    display: none;
+}
+.newNote .categoryshow{
+    position: absolute;
+    background: #dcdcdc;
+    flex-direction: column;
+    width: 139px;
+    gap: 7px;
+    padding: 6px;
+    border-radius: 3px;
+    top: 15%;
+    right: 22%;
+    transform: scale(0);
+    box-shadow: 0px 0px 6px -1px #444444;
+    transition: .3s;
+    display: none;
+    z-index: 100;
+}
+.newNote .categoryshow.visible{
+    display: flex;
+}
+.newNote .categoryshow.animate{
+    transform: scale(1);
+}
+.newNote .colors {
+    transform: scale(0);
+    transition: .3s;
+}
+.newNote .colors  color{
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+}
+.newNote .colors.animate{
+    transform: scale(1);
+} 
+.newNote .colors color:first-child{
+    background: var(--color1);
+}
+.newNote .colors color:nth-child(2){
+    background: var(--color2);
+}
+.newNote .colors color:nth-child(3){
+    background: var(--color3);
+}
+.newNote .colors color:nth-child(4){
+    background: var(--color4);
+}
+.newNote .colors color:nth-child(5){
+    background: var(--color5);
+}
+.newNote .colors color:nth-child(6){
+    background: var(--color6);
+}
+.newNote .colors color:nth-child(7){
+    background: var(--color7);
+}
+.newNote .colors color:nth-child(8){
+    background: var(--color8);
+}
+.newNote .colors{
+    position: absolute;
+    background: #dcdcdc;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 151px;
+    gap: 4px;
+    padding: 14px 3px;
+    border-radius: 3px;
+    top: 27%;
+    right: 21%;
+    box-shadow: 0px 0px 6px -1px #444444;
+}
+.newNote .Time{
+    position: absolute;
+    background: #dcdcdc;
+    display: flex;
+    justify-content: space-evenly;
+    width: 151px;
+    align-items: center;
+    gap: 4px;
+    padding: 14px 3px;
+    border-radius: 3px;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -43%) scale(0);
+    box-shadow: 0px 0px 6px -1px #444444;
+    transition: .3s;
+} 
+.newNote .Time ion-icon{
+    position: absolute;
+    bottom: 5%;
+    right: 35%;
+    font-size: 1.3rem;
+    background: var(--color2);
+    color: white;
+    font-weight: bold;
+    padding: 1px;
+    border-radius: 50%;
+}
+.newNote .Time.animate{
+    transform: translate(50%, -43%) scale(1);
+}
+.newNote .Time .AMPM{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.newNote .Time  .hours,
+.newNote .Time  .minutes{
+    padding: 4px 8px;
+    background: var(--main-color1);
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.newNote .Time .contenthours,
+.newNote .Time  .contentminutes{
+    position: absolute;
+    background: #bdbdbd;
+    display: flex;
+    flex-direction: column;
+    padding: 0 7px;
+    border-radius: 3px;
+    color: black;
+    height: 61.8px;
+    overflow-y: auto;
+    width: 77px;
+    box-shadow: 0px 0px 6px -1px #444444;
+}
+.newNote .Time .contentminutes{
+    right: -13px;
+    top: 77px;
+    transform: scale(0);
+    transition: .4s;
+}
+.newNote .Time  .minutes.noneclick{
+    pointer-events: none;
+}
+.newNote .Time .contentminutes.animate{
+    display: inline-flex;
+    transform: scale(1);
+}
+.newNote .Time .contenthours{
+    right: 46px;
+    top: 78px;
+    transform: scale(0);
+    transition: .4s;
+    
+}
+.newNote .Time .contenthours.animate{
+    display: inline-flex;
+    transform: scale(1);
+}
+.newNote .Time  .hours.noneclick{
+    pointer-events: none;
+}
+.newNote .Time  .contenthours span:not(:last-child){
+    border-bottom: 1px solid #d1d1d1;
+}
+.newNote .Time  .contentminutes span:not(:last-child){
+    border-bottom: 1px solid #d1d1d1;
+}
+.newNote .Time  .contenthours span.active,
+.newNote .Time  .contentminutes span.active{
+    background: var(--main-color1);
+    color: white;
+}
+.newNote .Time .AMPM div{
+    padding: 5px;
+    background: #f9f9f9;
+    color: black;
+    font-weight: bold;
+    border-radius: 3px;
+    font-size: 14px;
+    transition: .4s;
+}
+.newNote .Time .AMPM div.active{
+    background: var(--main-color1);
+    color: white;
+}
+.newNote .categoryshow li:not(:last-child){
+    border-bottom: 1px solid #b7b7b7;
+    padding: 4px 0;
+}
+#another-thing::before{
+    content: 'x';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 224px;
+    right: -29px;
+    color: white;
+    background-color: var(--main-color1);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    display: none;
+}
+#another-thing input{
+    outline: none;
+    border: none;
+    width: 100%;
+    background: white;
+    height: 30px;
+    caret-color: var(--main-color1);
+    padding: 4px;
+    transition: .4s;
+}
+.newNote .icons span{
+    color: black;
+    background: #e8e8e8;
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 17px;
+    width: 38.92px;
+    height: 31.33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newNote .iconCategory{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.newNote .icon{
+    background: gainsboro;
+    color: black;
+    border-radius: 2px;
+    font-size: 3rem;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 41px;
+    max-height: 50px;
+    transform: none;
+}
+.newNote .category{
+    background: gainsboro;
+    color: black;
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: 0 6px;
+    display: flex;
+    align-items: center;
+    min-width: 70.5px;
+    justify-content: center;
+}
+.newNote .colorRemainder{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.newNote .color{
+    background: gainsboro;
+    color: black;
+    width: 41px;
+    border-radius: 3px;
+    padding: 7px;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+}
+.newNote .Remainder{
+    background: gainsboro;
+    color: black;
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: 0 6px;
+    display: flex;
+    align-items: center;
+    width: 70.5px;
+    justify-content: center;
+}
+.newNote .Remainder.noneclick{
+    pointer-events: none;
+}
+.newNote h3{
+    margin-bottom: 1rem;
+}
+textarea{
+    resize: none;
+    outline: 0;
+    border: none;
+    background: #eaeaea;
+    caret-color: var(--main-color1);
+    padding: 10px 8px;
+    width: 220px;
+}
+.addDelete{
+    display: flex;
+    justify-content: end;
+    flex-direction: row-reverse;
+}
+.addDelete.spacebetween{
+    justify-content: space-between;
+}
+.addDelete .add{
+    background: var(--main-color1);
+    color: white;
+    font-weight: bold;
+    padding: 6px 9px;
+    border-radius: 3px;
+    margin: 1rem 1rem 0 0;
+}
+.addDelete .update{
+    display: none;
+    background: #e5540a;
+    color: white;
+    font-weight: bold;
+    padding: 6px 9px;
+    border-radius: 3px;
+    margin: 1rem 0rem 0 1rem;
+}
+.addDelete .update.visible{
+    display: block;
+}
+#btn{
+    content: 'x';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: -11px;
+    right: -6px;
+    color: white;
+    background-color: var(--main-color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: none;
+    z-index: 1;
+}
+#btn2{
+    content: 'x';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    color: white;
+    background-color: var(--main-color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: none;
+    z-index: 1;
+    top: 43%;
+    right: -28%;
+    border-radius: 50%;
+    display: none;
+
+}
+#btnchecked{
+    content: '>';
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, 307%);
+    color: white;
+    background-color: #05ad23;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: none;
+    z-index: 1;
+    border-radius: 3px;
+    display: none;
+}
+#btnchecked.visible{
+    display: block;
+}
+#btn2.visible{
+    display: block;
+}
+#another-thing .parentinput{
+    width: 223px;
+    height: 137px;
+    background: #ececec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    box-shadow: 0 0 6px 0px grey;
+    border-radius: 4px;
+    position: absolute;
+    top: 47%;
+    left: -34%;
+    display: none;
+    transform: scale(0);
+    transition: .3s;
+}
+#another-thing .parentinput.visible{
+    display: flex;
+}
+#another-thing .parentinput.animate{
+    transform: scale(1);
+}
+#another-thing .parentinput h3{
+    position: absolute;
+    top: 16px;
+    font-size: 17px;
+}
+#another-thing .parentinput .counter{
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    color: var(--main-color1);
+}
+.shortNote{
+    width: fit-content;
+    background: #dddddd;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+    height: fit-content;
+    display: none;
+    transform: scale(0);
+    transition: .3s;
+}
+.shortNote.visible{
+    display: grid;
+}
+.shortNote.animate{
+    transform: scale(1);
+}
+.shortNote .CATEGORY{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #f9f9f94f;
+    color: white;
+    font-weight: bold;
+    width: 48px;
+}
+.shortNote .TIME{
+    margin-top: 0.4rem;
+    border-radius: 2px;
+    background: #f9f9f94f;
+    color: white;
+}
+.shortNote .iconcategory{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.4rem;
+}
+.shortNote .iconcategory .ICON{
+    padding: 0 6px;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    height: 41px;
+    background: #f9f9f94f;
+    color: white;
+}
+.container.notes{
+    height: 100vh;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,122.22px);
+    gap: 6px;
+}
+.shortmessg{
+    margin-top: 0.3rem;
+    background: #f9f9f94f;
+    border-radius: 2px;
+    overflow: hidden;
+    width: 90px;
+    height: 30px;
+    color: white;
+}
+.shortNote > ion-icon{
+    padding: 2px 3px;
+    background: white;
+    color: var(--color4);
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 7px;
+    right: 6px;
+    z-index: 1;
+    width: 83px;
+    margin: 0 auto;
+    transition: .4s;
+    display: none; 
+     transform: scale(0);
+}
+.shortNote > ion-icon:nth-child(2){
+    top: 40px;
+    background: var(--main-color1);
+    color: white;
+}
+.shortNote > ion-icon:nth-child(3){
+    top: 74px;
+    background: #02e1aa;
+    color: white;
+}
+.shortNote.trash > ion-icon{
+    display: block;
+}
+.shortNote.trashanimate > ion-icon{
+    transform: scale(1);
+}
+.shortNote .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #5555ff00;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 5px;
+    transition: .4s;
+}
+.shortNote.opacity .overlay{
+    background: #5555ffe0;
+}
+.container.edit{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}
+#backIcon{
+    position: absolute;
+    font-size: 2rem;
+    left: 0;
+    top: 11px;
+}
